@@ -195,7 +195,7 @@ def pilih():
                             print logo
                             print 52 * '\x1b[1;97m\xe2\x95\x90'
                             os.system('git pull origin master')
-                            raw_input('\n\x1b[1;91m[ \x1b[1;97mKembali \x1b[1;91m]')
+                            raw_input('\n\x1b[1;91m[ \x1b[1;97mSukses Perbaharui! Silahkan Exit Termux Dahulu \x1b[1;91m]')
                             menu()
                         else:
                             if zedd == '6':

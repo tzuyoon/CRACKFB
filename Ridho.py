@@ -33,7 +33,7 @@ def jalan(z):
         sys.stdout.flush()
         time.sleep(0.01)
 
-logo = " \x1b[1;92m█████████\n \x1b[1;92m█▄█████▄█         \x1b[1;97m●▬▬▬▬▬▬▬▬▬๑۩۩๑▬▬▬▬▬▬▬▬●\n \x1b[1;92m█ \x1b[1;93m▼▼▼▼▼  \x1b[1;97m- _ --_-- \x1b[1;92m╔╦╗┌─┐┬─┐┬┌─   ╔═╗╔╗ \n \x1b[1;92m█  \x1b[1;97m  \x1b[1;97m_-_-- -_ --__ \x1b[1;92m ║║├─┤├┬┘├┴┐───╠╣ ╠╩╗\n \x1b[1;92m█ \x1b[1;93m▲▲▲▲▲ \x1b[1;97m--  - _ -- \x1b[1;92m═╩╝┴ ┴┴└─┴ ┴   ╚  ╚═╝  \x1b[1;93mPremium\n \x1b[1;92m█████████         \x1b[1;97m«==========✧==========»\n \x1b[1;92m ██ ██\n \x1b[1;97m╔════════════════════════════════════════════════╗\n \x1b[1;97m║ \x1b[1;93m*  \x1b[1;97mReCode   \x1b[1;91m:  \x1b[1;96m Mrs Tzuyoon  \x1b[1;97m                   ║\n \x1b[1;97m║ \x1b[1;93m*  \x1b[1;97mGitHub   \x1b[1;91m:  \x1b[1;92m \x1b[92mhttps://github.com/tzuyoon\x1b[    \x1b[1;97m ║\n \x1b[1;97m║ \x1b[1;93m*  \x1b[1;97mChannel YT       \x1b[1;91m:   \x1b[1;92\x1b[92mhttps://youtube.com/YoonaGaming\x1b[     \x1b[1;97m   ║   \n \x1b[1;97m╚════════════════════════════════════════════════╝"  '\n\x1b[1;92m[*] Silahkan Login Operamini Agar Tidak Checkpoint\n'
+logo = " \x1b[1;92m█████████\n \x1b[1;92m█▄█████▄█         \x1b[1;97m●▬▬▬▬▬▬▬▬▬๑۩۩๑▬▬▬▬▬▬▬▬●\n \x1b[1;92m█ \x1b[1;93m▼▼▼▼▼  \x1b[1;97m- _ --_-- \x1b[1;92m╔╦╗┌─┐┬─┐┬┌─   ╔═╗╔╗ \n \x1b[1;92m█  \x1b[1;97m  \x1b[1;97m_-_-- -_ --__ \x1b[1;92m ║║├─┤├┬┘├┴┐───╠╣ ╠╩╗\n \x1b[1;92m█ \x1b[1;93m▲▲▲▲▲ \x1b[1;97m--  - _ -- \x1b[1;92m═╩╝┴ ┴┴└─┴ ┴   ╚  ╚═╝  \x1b[1;93mPremium\n \x1b[1;92m█████████         \x1b[1;97m«==========✧==========»\n \x1b[1;92m ██ ██\n \x1b[1;97m╔════════════════════════════════════════════════╗\n \x1b[1;97m║ \x1b[1;93m*  \x1b[1;97mReCode   \x1b[1;91m:  \x1b[1;96m Mrs Tzuyoon  \x1b[1;97m                   ║\n \x1b[1;97m║ \x1b[1;93m*  \x1b[1;97mGitHub   \x1b[1;91m:  \x1b[1;92m \x1b[92mhttps://github.com/tzuyoon\x1b[    \x1b[1;97m ║\n \x1b[1;97m║ \x1b[1;93m*  \x1b[1;97mYouTube       \x1b[1;91m:   \x1b[1;92\x1b[92mhttps://youtube.com/YoonaGaming\x1b[     \x1b[1;97m   ║   \n \x1b[1;97m╚════════════════════════════════════════════════╝"  '\n\x1b[1;92m[*] Silahkan Login Operamini Agar Tidak Checkpoint\n'
 
 def tik():
     titik = [
@@ -1899,7 +1899,7 @@ def lain():
     print logo
     print 52 * '\x1b[1;97m\xe2\x95\x90'
     print '║-> \x1b[1;37;40m1. Update Status'
-    print '║-> \x1b[1;37;40m2. Mrmbuat Catatan'
+    print '║-> \x1b[1;37;40m2. Membuat Catatan'
     print '║-> \x1b[1;37;40m3. Mengecek Akun'
     print '║-> \x1b[1;37;40m4. Daftar Grup Anda'
     print '║-> \x1b[1;37;40m5. Pelindung Foto Profil'

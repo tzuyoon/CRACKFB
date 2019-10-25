@@ -39,7 +39,7 @@ def tik():
     titik = [
      '.   ', '..  ', '... ']
     for o in titik:
-        print '\r\x1b[1;91m[\xe2\x97\x8f] \x1b[1;92mMohon Tunggu \x1b[1;97m' + o,
+        print '\r\x1b[1;91m[\xe2\x97\x8f] \x1b[1;92mCek Akun, Tunggu woyy \x1b[1;97m' + o,
         sys.stdout.flush()
         time.sleep(0.01)
 
@@ -759,7 +759,7 @@ def brute():
                         dapat = open('Brute.txt', 'w')
                         dapat.write(email + ' | ' + pw + '\n')
                         dapat.close()
-                        print '\n\x1b[1;91m[+] \x1b[1;92mFounded.'
+                        print '\n\x1b[1;91m[+] \x1b[1;92mKETEMU WOY.'
                         print 52 * '\x1b[1;97m\xe2\x95\x90'
                         print '\x1b[1;91m[\xe2\x9e\xb9] \x1b[1;92mUsername \x1b[1;91m:\x1b[1;97m ' + email
                         print '\x1b[1;91m[\xe2\x9e\xb9] \x1b[1;92mPassword \x1b[1;91m:\x1b[1;97m ' + pw
@@ -964,10 +964,10 @@ def yahoolist():
             else:
                 print '\x1b[1;91m ' + mail
 
-    print '\n\x1b[1;91m[+] \x1b[1;97mFinish'
+    print '\n\x1b[1;91m[+] \x1b[1;97mGitu aja bre'
     print '\x1b[1;91m[+] \x1b[1;97mSaved \x1b[1;91m:\x1b[1;97m MailVuln.txt'
     save.close()
-    raw_input('\n\x1b[1;91m[ \x1b[1;97mBack \x1b[1;91m]')
+    raw_input('\n\x1b[1;91m[ \x1b[1;97mOkay cok \x1b[1;91m]')
     menu_yahoo()
 
 
@@ -984,14 +984,14 @@ def grab():
     os.system('clear')
     print logo
     print 52 * '\x1b[1;97m\xe2\x95\x90'
-    print '║-> \x1b[1;37;40m1. Get ID From Friends'
-    print '║-> \x1b[1;37;40m2. Get Friends ID From Friends'
-    print '║-> \x1b[1;37;40m3. Get ID From GRUP'
-    print '║-> \x1b[1;37;40m4. Get Friends Email'
-    print '║-> \x1b[1;37;40m5. Get Friends Email From Friends'
-    print '║-> \x1b[1;37;40m6. Get Phone From Friends'
-    print '║-> \x1b[1;37;40m7. Get Friend\'s Phone From Friends'
-    print '║-> \x1b[1;31;40m0. Back'
+    print '║-> \x1b[1;37;40m1. Melihat FBID Teman'
+    print '║-> \x1b[1;37;40m2. Melihat FBID Teman dari Teman'
+    print '║-> \x1b[1;37;40m3. Melihat FBID Member Grup'
+    print '║-> \x1b[1;37;40m4. Melihat Email Teman'
+    print '║-> \x1b[1;37;40m5. Melihat Email Teman dari Teman'
+    print '║-> \x1b[1;37;40m6. Melihat Nomer HP Teman (Jangan dimodusin Kampang)'
+    print '║-> \x1b[1;37;40m7. Melihat Nomer HP Teman dari Teman'
+    print '║-> \x1b[1;31;40m0. Kembali'
     print '\x1b[1;37;40m║'
     grab_pilih()
 
@@ -999,7 +999,7 @@ def grab():
 def grab_pilih():
     cuih = raw_input('╚═\x1b[1;91m▶\x1b[1;97m ')
     if cuih == '':
-        print '\x1b[1;91m[!] Can\'t empty'
+        print '\x1b[1;91m[!] Pilih Angkanya Woy'
         grab_pilih()
     else:
         if cuih == '1':
@@ -1054,7 +1054,7 @@ def id_friends():
             for ah in z['data']:
                 idfriends.append(ah['id'])
                 bz.write(ah['id'] + '\n')
-                print '\r\x1b[1;92mName\x1b[1;91m  :\x1b[1;97m ' + ah['name']
+                print '\r\x1b[1;92mNama\x1b[1;91m  :\x1b[1;97m ' + ah['name']
                 print '\x1b[1;92mID   \x1b[1;91m : \x1b[1;97m' + ah['id']
                 print 52 * '\x1b[1;97m\xe2\x95\x90'
 
@@ -1068,7 +1068,7 @@ def id_friends():
             raw_input('\n\x1b[1;91m[ \x1b[1;97mKembali \x1b[1;91m]')
             grab()
         except (KeyboardInterrupt, EOFError):
-            print '\x1b[1;91m[!] Stopped'
+            print '\x1b[1;91m[!] Terhenti'
             raw_input('\n\x1b[1;91m[ \x1b[1;97mKembali \x1b[1;91m]')
             grab()
         except KeyError:
@@ -1095,21 +1095,21 @@ def idfrom_friends():
             os.system('clear')
             print logo
             print 52 * '\x1b[1;97m\xe2\x95\x90'
-            idt = raw_input('\x1b[1;91m[+] \x1b[1;92mInput ID Friends \x1b[1;91m: \x1b[1;97m')
+            idt = raw_input('\x1b[1;91m[+] \x1b[1;92mMasukan ID Teman \x1b[1;91m: \x1b[1;97m')
             try:
                 jok = requests.get('https://graph.facebook.com/' + idt + '?access_token=' + toket)
                 op = json.loads(jok.text)
-                print '\x1b[1;91m[\x1b[1;96m\xe2\x9c\x93\x1b[1;91m] \x1b[1;92mFrom\x1b[1;91m :\x1b[1;97m ' + op['name']
+                print '\x1b[1;91m[\x1b[1;96m\xe2\x9c\x93\x1b[1;91m] \x1b[1;92mdari\x1b[1;91m :\x1b[1;97m ' + op['name']
             except KeyError:
-                print '\x1b[1;91m[!] Not be friends'
-                raw_input('\n\x1b[1;91m[ \x1b[1;97mBack \x1b[1;91m]')
+                print '\x1b[1;91m[!] Lu Belum Berteman Cuk'
+                raw_input('\n\x1b[1;91m[ \x1b[1;97mKembali \x1b[1;91m]')
                 grab()
 
             r = requests.get('https://graph.facebook.com/' + idt + '?fields=friends.limit(5000)&access_token=' + toket)
             z = json.loads(r.text)
             save_idt = raw_input('\x1b[1;91m[+] \x1b[1;92mSimpan File \x1b[1;97mext(file.txt) \x1b[1;91m: \x1b[1;97m')
             bz = open(save_idt, 'w')
-            jalan('\x1b[1;91m[\xe2\x9c\xba] \x1b[1;92mMohon Tunggu \x1b[1;97m...')
+            jalan('\x1b[1;91m[\xe2\x9c\xba] \x1b[1;92mTunggulah Woyy \x1b[1;97m...')
             print 52 * '\x1b[1;97m\xe2\x95\x90'
             for ah in z['friends']['data']:
                 idfromfriends.append(ah['id'])
@@ -1150,13 +1150,13 @@ def id_member_grup():
             os.system('clear')
             print logo
             print 52 * '\x1b[1;97m\xe2\x95\x90'
-            id = raw_input('\x1b[1;91m[+] \x1b[1;92mID grup \x1b[1;91m:\x1b[1;97m ')
+            id = raw_input('\x1b[1;91m[+] \x1b[1;92mID Grup \x1b[1;91m:\x1b[1;97m ')
             try:
                 r = requests.get('https://graph.facebook.com/group/?id=' + id + '&access_token=' + toket)
                 asw = json.loads(r.text)
                 print '\x1b[1;91m[\x1b[1;96m\xe2\x9c\x93\x1b[1;91m] \x1b[1;92mName group \x1b[1;91m:\x1b[1;97m ' + asw['name']
             except KeyError:
-                print '\x1b[1;91m[!] Group not found'
+                print '\x1b[1;91m[!] Join Grupnya doloo'
                 raw_input('\n\x1b[1;91m[ \x1b[1;97mBack \x1b[1;91m]')
                 grab()
 
@@ -1169,18 +1169,18 @@ def id_member_grup():
             for i in s['data']:
                 idmem.append(i['id'])
                 b.write(i['id'] + '\n')
-                print '\r\x1b[1;92mName\x1b[1;91m  :\x1b[1;97m ' + i['name']
+                print '\r\x1b[1;92mNama\x1b[1;91m  :\x1b[1;97m ' + i['name']
                 print '\x1b[1;92mID  \x1b[1;91m  :\x1b[1;97m ' + i['id']
                 print 52 * '\x1b[1;97m\xe2\x95\x90'
 
             print '\n\r\x1b[1;91m[+] \x1b[1;97mTotal ID \x1b[1;96m%s' % len(idmem)
             print '\x1b[1;91m[+] \x1b[1;97mFile saved \x1b[1;91m: \x1b[1;97m' + simg
             b.close()
-            raw_input('\n\x1b[1;91m[ \x1b[1;97mBack \x1b[1;91m]')
+            raw_input('\n\x1b[1;91m[ \x1b[1;97mKembali \x1b[1;91m]')
             grab()
         except IOError:
             print '\x1b[1;91m[!] Error when creating file'
-            raw_input('\n\x1b[1;91m[ \x1b[1;97mBack \x1b[1;91m]')
+            raw_input('\n\x1b[1;91m[ \x1b[1;97mKembali \x1b[1;91m]')
             grab()
         except (KeyboardInterrupt, EOFError):
             print '\x1b[1;91m[!] Stopped'
@@ -1188,8 +1188,8 @@ def id_member_grup():
             grab()
         except KeyError:
             os.remove(simg)
-            print '\x1b[1;91m[!] Group not found'
-            raw_input('\n\x1b[1;91m[ \x1b[1;97mBack \x1b[1;91m]')
+            print '\x1b[1;91m[!] Join Grupnya doloo'
+            raw_input('\n\x1b[1;91m[ \x1b[1;97mKembali \x1b[1;91m]')
             grab()
         except requests.exceptions.ConnectionError:
             print '\x1b[1;91m[\xe2\x9c\x96] No connection'
@@ -1214,7 +1214,7 @@ def email():
             r = requests.get('https://graph.facebook.com/me/friends?access_token=' + toket)
             a = json.loads(r.text)
             mpsh = open(mails, 'w')
-            jalan('\x1b[1;91m[\xe2\x9c\xba] \x1b[1;92mPlease wait \x1b[1;97m...')
+            jalan('\x1b[1;91m[\xe2\x9c\xba] \x1b[1;92mTunggu Cok \x1b[1;97m...')
             print 52 * '\x1b[1;97m\xe2\x95\x90'
             for i in a['data']:
                 x = requests.get('https://graph.facebook.com/' + i['id'] + '?access_token=' + toket)
@@ -1222,7 +1222,7 @@ def email():
                 try:
                     em.append(z['email'])
                     mpsh.write(z['email'] + '\n')
-                    print '\r\x1b[1;92mName\x1b[1;91m  :\x1b[1;97m ' + z['name']
+                    print '\r\x1b[1;92mNama\x1b[1;91m  :\x1b[1;97m ' + z['name']
                     print '\x1b[1;92mEmail\x1b[1;91m : \x1b[1;97m' + z['email']
                     print 52 * '\x1b[1;97m\xe2\x95\x90'
                 except KeyError:
@@ -1231,11 +1231,11 @@ def email():
             print '\n\r\x1b[1;91m[+] \x1b[1;97mTotal Email\x1b[1;96m%s' % len(em)
             print '\x1b[1;91m[+] \x1b[1;97mFile saved \x1b[1;91m: \x1b[1;97m' + mails
             mpsh.close()
-            raw_input('\n\x1b[1;91m[ \x1b[1;97mBack \x1b[1;91m]')
+            raw_input('\n\x1b[1;91m[ \x1b[1;97mKembali \x1b[1;91m]')
             grab()
         except IOError:
             print '\x1b[1;91m[!] Error when creating file'
-            raw_input('\n\x1b[1;91m[ \x1b[1;97mBack \x1b[1;91m]')
+            raw_input('\n\x1b[1;91m[ \x1b[1;97mKembali \x1b[1;91m]')
             grab()
         except (KeyboardInterrupt, EOFError):
             print '\x1b[1;91m[!] Stopped'
@@ -1265,21 +1265,21 @@ def emailfrom_friends():
             os.system('clear')
             print logo
             print 52 * '\x1b[1;97m\xe2\x95\x90'
-            idt = raw_input('\x1b[1;91m[+] \x1b[1;92mInput ID Friends \x1b[1;91m: \x1b[1;97m')
+            idt = raw_input('\x1b[1;91m[+] \x1b[1;92mMasukan ID Teman \x1b[1;91m: \x1b[1;97m')
             try:
                 jok = requests.get('https://graph.facebook.com/' + idt + '?access_token=' + toket)
                 op = json.loads(jok.text)
                 print '\x1b[1;91m[\x1b[1;96m\xe2\x9c\x93\x1b[1;91m] \x1b[1;92mFrom\x1b[1;91m :\x1b[1;97m ' + op['name']
             except KeyError:
-                print '\x1b[1;91m[!] Not be friends'
-                raw_input('\n\x1b[1;91m[ \x1b[1;97mBack \x1b[1;91m]')
+                print '\x1b[1;91m[!] Lu Belum Berteman'
+                raw_input('\n\x1b[1;91m[ \x1b[1;97mKembali \x1b[1;91m]')
                 grab()
 
             mails = raw_input('\x1b[1;91m[+] \x1b[1;92mSave File \x1b[1;97mext(file.txt) \x1b[1;91m: \x1b[1;97m')
             r = requests.get('https://graph.facebook.com/' + idt + '/friends?access_token=' + toket)
             a = json.loads(r.text)
             mpsh = open(mails, 'w')
-            jalan('\x1b[1;91m[\xe2\x9c\xba] \x1b[1;92mPlease wait \x1b[1;97m...')
+            jalan('\x1b[1;91m[\xe2\x9c\xba] \x1b[1;92mTunggu woyy \x1b[1;97m...')
             print 52 * '\x1b[1;97m\xe2\x95\x90'
             for i in a['data']:
                 x = requests.get('https://graph.facebook.com/' + i['id'] + '?access_token=' + toket)
@@ -1296,7 +1296,7 @@ def emailfrom_friends():
             print '\n\r\x1b[1;91m[+] \x1b[1;97mTotal Email\x1b[1;96m%s' % len(emfromfriends)
             print '\x1b[1;91m[+] \x1b[1;97mFile saved \x1b[1;91m: \x1b[1;97m' + mails
             mpsh.close()
-            raw_input('\n\x1b[1;91m[ \x1b[1;97mBack \x1b[1;91m]')
+            raw_input('\n\x1b[1;91m[ \x1b[1;97mKembali \x1b[1;91m]')
             grab()
         except IOError:
             print '\x1b[1;91m[!] Error when creating file'
@@ -1325,12 +1325,12 @@ def nomor_hp():
             os.system('clear')
             print logo
             print 52 * '\x1b[1;97m\xe2\x95\x90'
-            noms = raw_input('\x1b[1;91m[+] \x1b[1;92mSave File \x1b[1;97mext(file.txt) \x1b[1;91m: \x1b[1;97m')
+            noms = raw_input('\x1b[1;91m[+] \x1b[1;92mSimpan File \x1b[1;97mext(nomer.txt) \x1b[1;91m: \x1b[1;97m')
             url = 'https://graph.facebook.com/me/friends?access_token=' + toket
             r = requests.get(url)
             z = json.loads(r.text)
             no = open(noms, 'w')
-            jalan('\x1b[1;91m[\xe2\x9c\xba] \x1b[1;92mPlease wait \x1b[1;97m...')
+            jalan('\x1b[1;91m[\xe2\x9c\xba] \x1b[1;92mAnjay Kepoin Nomer Orang, asw \x1b[1;97m...')
             print 52 * '\x1b[1;97m\xe2\x95\x90'
             for n in z['data']:
                 x = requests.get('https://graph.facebook.com/' + n['id'] + '?access_token=' + toket)
@@ -1338,16 +1338,16 @@ def nomor_hp():
                 try:
                     hp.append(z['mobile_phone'])
                     no.write(z['mobile_phone'] + '\n')
-                    print '\r\x1b[1;92mName\x1b[1;91m  :\x1b[1;97m ' + z['name']
-                    print '\x1b[1;92mPhone\x1b[1;91m : \x1b[1;97m' + z['mobile_phone']
+                    print '\r\x1b[1;92mNama\x1b[1;91m  :\x1b[1;97m ' + z['name']
+                    print '\x1b[1;92mNomor HP\x1b[1;91m : \x1b[1;97m' + z['mobile_phone']
                     print 52 * '\x1b[1;97m\xe2\x95\x90'
                 except KeyError:
                     pass
 
-            print '\n\r\x1b[1;91m[+] \x1b[1;97mTotal Phone\x1b[1;96m%s' % len(hp)
-            print '\x1b[1;91m[+] \x1b[1;97mFile saved \x1b[1;91m: \x1b[1;97m' + noms
+            print '\n\r\x1b[1;91m[+] \x1b[1;97mJumlah Nomer HP\x1b[1;96m%s' % len(hp)
+            print '\x1b[1;91m[+] \x1b[1;97mNOMERNYA ORANG JANGAN DIMODUSIN YA BABYK\x1b[1;91m: \x1b[1;97m' + noms
             no.close()
-            raw_input('\n\x1b[1;91m[ \x1b[1;97mBack \x1b[1;91m]')
+            raw_input('\n\x1b[1;91m[ \x1b[1;97mKembali \x1b[1;91m]')
             grab()
         except IOError:
             print '\x1b[1;91m[!] Error when creating file'
@@ -1381,21 +1381,21 @@ def hpfrom_friends():
             os.system('clear')
             print logo
             print 52 * '\x1b[1;97m\xe2\x95\x90'
-            idt = raw_input('\x1b[1;91m[+] \x1b[1;92mInput Friends ID \x1b[1;91m: \x1b[1;97m')
+            idt = raw_input('\x1b[1;91m[+] \x1b[1;92mMasukan ID Teman \x1b[1;91m: \x1b[1;97m')
             try:
                 jok = requests.get('https://graph.facebook.com/' + idt + '?access_token=' + toket)
                 op = json.loads(jok.text)
                 print '\x1b[1;91m[\x1b[1;96m\xe2\x9c\x93\x1b[1;91m] \x1b[1;92mFrom\x1b[1;91m :\x1b[1;97m ' + op['name']
             except KeyError:
-                print '\x1b[1;91m[!] Not be friends'
-                raw_input('\n\x1b[1;91m[ \x1b[1;97mBack \x1b[1;91m]')
+                print '\x1b[1;91m[!] Belom Berteman'
+                raw_input('\n\x1b[1;91m[ \x1b[1;97mKembali \x1b[1;91m]')
                 grab()
 
-            noms = raw_input('\x1b[1;91m[+] \x1b[1;92mSave File \x1b[1;97mext(file.txt) \x1b[1;91m: \x1b[1;97m')
+            noms = raw_input('\x1b[1;91m[+] \x1b[1;92mSimpan File \x1b[1;97mext(nomer2.txt) \x1b[1;91m: \x1b[1;97m')
             r = requests.get('https://graph.facebook.com/' + idt + '/friends?access_token=' + toket)
             a = json.loads(r.text)
             no = open(noms, 'w')
-            jalan('\x1b[1;91m[\xe2\x9c\xba] \x1b[1;92mPlease wait \x1b[1;97m...')
+            jalan('\x1b[1;91m[\xe2\x9c\xba] \x1b[1;92mTunggu cok \x1b[1;97m...')
             print 52 * '\x1b[1;97m\xe2\x95\x90'
             for i in a['data']:
                 x = requests.get('https://graph.facebook.com/' + i['id'] + '?access_token=' + toket)
@@ -1403,16 +1403,16 @@ def hpfrom_friends():
                 try:
                     hpfromfriends.append(z['mobile_phone'])
                     no.write(z['mobile_phone'] + '\n')
-                    print '\r\x1b[1;92mName\x1b[1;91m  :\x1b[1;97m ' + z['name']
-                    print '\x1b[1;92mPhone\x1b[1;91m : \x1b[1;97m' + z['mobile_phone']
+                    print '\r\x1b[1;92mNama\x1b[1;91m  :\x1b[1;97m ' + z['name']
+                    print '\x1b[1;92mNomer HP\x1b[1;91m : \x1b[1;97m' + z['mobile_phone']
                     print 52 * '\x1b[1;97m\xe2\x95\x90'
                 except KeyError:
                     pass
 
-            print '\n\r\x1b[1;91m[+] \x1b[1;97mTotal number\x1b[1;96m%s' % len(hpfromfriends)
-            print '\x1b[1;91m[+] \x1b[1;97mFile saved \x1b[1;91m: \x1b[1;97m' + noms
+            print '\n\r\x1b[1;91m[+] \x1b[1;97mJumlah Nomer HP\x1b[1;96m%s' % len(hpfromfriends)
+            print '\x1b[1;91m[+] \x1b[1;97mNOMERNYA ORANG JANGAN DIMODUSIN YA BGSD \x1b[1;91m: \x1b[1;97m' + noms
             no.close()
-            raw_input('\n\x1b[1;91m[ \x1b[1;97mBack \x1b[1;91m]')
+            raw_input('\n\x1b[1;91m[ \x1b[1;97mKembali \x1b[1;91m]')
             grab()
         except IOError:
             print '\x1b[1;91m[!] Make file failed'
@@ -1440,14 +1440,14 @@ def menu_bot():
     os.system('clear')
     print logo
     print 52 * '\x1b[1;97m\xe2\x95\x90'
-    print '║-> \x1b[1;37;40m1. Bot Reactions Target Post'
-    print '║-> \x1b[1;37;40m2. Bot Reactions Group Post'
-    print '║-> \x1b[1;37;40m3. Bot Comment Target Post'
-    print '║-> \x1b[1;37;40m4. Bot Comment Group Post'
-    print '║-> \x1b[1;37;40m5. Mass Delete Post'
-    print '║-> \x1b[1;37;40m6. Accept Friend Requests'
-    print '║-> \x1b[1;37;40m7. Unfriends'
-    print '║-> \x1b[1;31;40m0. Back'
+    print '║-> \x1b[1;37;40m1. Memberi Reactions ke Postingan Orang'
+    print '║-> \x1b[1;37;40m2. Memberi Reactions ke Postingan Grup'
+    print '║-> \x1b[1;37;40m3. Komentar Otomatis ke Postingan Orang'
+    print '║-> \x1b[1;37;40m4. Komentar Otomatis ke Postingan Grup'
+    print '║-> \x1b[1;37;40m5. Hapus Post Secara Ez'
+    print '║-> \x1b[1;37;40m6. Terima Semua Permintaan Pertemanan'
+    print '║-> \x1b[1;37;40m7. Hapus Pertemanan Secara Ez'
+    print '║-> \x1b[1;31;40m0. Kembali'
     print '\x1b[1;37;40m║'
     bot_pilih()
 
@@ -1455,7 +1455,7 @@ def menu_bot():
 def bot_pilih():
     bots = raw_input('╚═\x1b[1;91m▶\x1b[1;97m ')
     if bots == '':
-        print '\x1b[1;91m[!] Can\'t empty'
+        print '\x1b[1;91m[!] Pilih Angkanya Woy'
         bot_pilih()
     else:
         if bots == '1':
@@ -1505,7 +1505,7 @@ def menu_react():
     print '║-> \x1b[1;37;40m4. \x1b[1;97mHaha'
     print '║-> \x1b[1;37;40m5. \x1b[1;97mSad'
     print '║-> \x1b[1;37;40m6. \x1b[1;97mAngry'
-    print '║-> \x1b[1;31;40m0. Back'
+    print '║-> \x1b[1;31;40m0. Kembali'
     print '\x1b[1;37;40m║'
     react_pilih()
 
@@ -1514,7 +1514,7 @@ def react_pilih():
     global tipe
     aksi = raw_input('╚═\x1b[1;91m▶\x1b[1;97m ')
     if aksi == '':
-        print '\x1b[1;91m[!] Can\'t empty'
+        print '\x1b[1;91m[!] Pilih Angkanya'
         react_pilih()
     else:
         if aksi == '1':
@@ -1562,11 +1562,11 @@ def react():
         print logo
         print 52 * '\x1b[1;97m\xe2\x95\x90'
         ide = raw_input('\x1b[1;91m[+] \x1b[1;92mID Target \x1b[1;91m:\x1b[1;97m ')
-        limit = raw_input('\x1b[1;91m[!] \x1b[1;92mLimit \x1b[1;91m:\x1b[1;97m ')
+        limit = raw_input('\x1b[1;91m[!] \x1b[1;92mJumlah React Status \x1b[1;91m:\x1b[1;97m ')
         try:
             oh = requests.get('https://graph.facebook.com/' + ide + '?fields=feed.limit(' + limit + ')&access_token=' + toket)
             ah = json.loads(oh.text)
-            jalan('\x1b[1;91m[\xe2\x9c\xba] \x1b[1;92mPlease wait \x1b[1;97m...')
+            jalan('\x1b[1;91m[\xe2\x9c\xba] \x1b[1;92mTunggulah Woyy, aku nih Bot \x1b[1;97m...')
             print 52 * '\x1b[1;97m\xe2\x95\x90'
             for a in ah['feed']['data']:
                 y = a['id']
@@ -1575,12 +1575,12 @@ def react():
                 print '\x1b[1;92m[\x1b[1;97m' + y[:10].replace('\n', ' ') + '... \x1b[1;92m] \x1b[1;97m' + tipe
 
             print
-            print '\r\x1b[1;91m[+]\x1b[1;97m Finish \x1b[1;96m' + str(len(reaksi))
-            raw_input('\n\x1b[1;91m[ \x1b[1;97mBack \x1b[1;91m]')
+            print '\r\x1b[1;91m[+]\x1b[1;97m Segitu Doang, Ez \x1b[1;96m' + str(len(reaksi))
+            raw_input('\n\x1b[1;91m[ \x1b[1;97mKembali \x1b[1;91m]')
             menu_bot()
         except KeyError:
-            print '\x1b[1;91m[!] ID not found'
-            raw_input('\n\x1b[1;91m[ \x1b[1;97mBack \x1b[1;91m]')
+            print '\x1b[1;91m[!] ID Tidak Ditemukan'
+            raw_input('\n\x1b[1;91m[ \x1b[1;97mKembali \x1b[1;91m]')
             menu_bot()
 
 
@@ -1603,7 +1603,7 @@ def grup_react():
     print '║-> \x1b[1;37;40m4. \x1b[1;97mHaha'
     print '║-> \x1b[1;37;40m5. \x1b[1;97mSad'
     print '║-> \x1b[1;37;40m6. \x1b[1;97mAngry'
-    print '║-> \x1b[1;31;40m0. Back'
+    print '║-> \x1b[1;31;40m0. Kembali'
     print '\x1b[1;37;40m║'
     reactg_pilih()
 
@@ -1612,7 +1612,7 @@ def reactg_pilih():
     global tipe
     aksi = raw_input('╚═\x1b[1;91m▶\x1b[1;97m ')
     if aksi == '':
-        print '\x1b[1;91m[!] Can\'t empty'
+        print '\x1b[1;91m[!] Pilih Angkanya'
         reactg_pilih()
     else:
         if aksi == '1':
@@ -1663,7 +1663,7 @@ def reactg():
         limit = raw_input('\x1b[1;91m[!] \x1b[1;92mLimit \x1b[1;91m:\x1b[1;97m ')
         ah = requests.get('https://graph.facebook.com/group/?id=' + ide + '&access_token=' + toket)
         asw = json.loads(ah.text)
-        print '\x1b[1;91m[\x1b[1;96m\xe2\x9c\x93\x1b[1;91m] \x1b[1;92mName group \x1b[1;91m:\x1b[1;97m ' + asw['name']
+        print '\x1b[1;91m[\x1b[1;96m\xe2\x9c\x93\x1b[1;91m] \x1b[1;92mNama group \x1b[1;91m:\x1b[1;97m ' + asw['name']
         try:
             oh = requests.get('https://graph.facebook.com/v3.0/' + ide + '?fields=feed.limit(' + limit + ')&access_token=' + toket)
             ah = json.loads(oh.text)
@@ -1676,12 +1676,12 @@ def reactg():
                 print '\x1b[1;92m[\x1b[1;97m' + y[:10].replace('\n', ' ') + '... \x1b[1;92m] \x1b[1;97m' + tipe
 
             print
-            print '\r\x1b[1;91m[+]\x1b[1;97m Finish \x1b[1;96m' + str(len(reaksigrup))
+            print '\r\x1b[1;91m[+]\x1b[1;97m Segitu Doang mah Ez \x1b[1;96m' + str(len(reaksigrup))
             raw_input('\n\x1b[1;91m[ \x1b[1;97mBack \x1b[1;91m]')
             menu_bot()
         except KeyError:
-            print '\x1b[1;91m[!] ID not found'
-            raw_input('\n\x1b[1;91m[ \x1b[1;97mBack \x1b[1;91m]')
+            print '\x1b[1;91m[!] ID Salah'
+            raw_input('\n\x1b[1;91m[ \x1b[1;97mKembali \x1b[1;91m]')
             menu_bot()
 
 
@@ -1698,15 +1698,15 @@ def bot_komen():
         os.system('clear')
         print logo
         print 52 * '\x1b[1;97m\xe2\x95\x90'
-        print "\x1b[1;91m[!] \x1b[1;92mUse \x1b[1;97m'<>' \x1b[1;92m for newline"
+        print "\x1b[1;91m[!] \x1b[1;92mGunakan Perintah \x1b[1;97m'<>' \x1b[1;92mUntuk Baris Baru"
         ide = raw_input('\x1b[1;91m[+] \x1b[1;92mID Target \x1b[1;91m:\x1b[1;97m ')
-        km = raw_input('\x1b[1;91m[+] \x1b[1;92mComments  \x1b[1;91m:\x1b[1;97m ')
-        limit = raw_input('\x1b[1;91m[!] \x1b[1;92mLimit \x1b[1;91m:\x1b[1;97m ')
+        km = raw_input('\x1b[1;91m[+] \x1b[1;92mTulis Komentarmu  \x1b[1;91m:\x1b[1;97m ')
+        limit = raw_input('\x1b[1;91m[!] \x1b[1;92mJumlah \x1b[1;91m:\x1b[1;97m ')
         km = km.replace('<>', '\n')
         try:
             p = requests.get('https://graph.facebook.com/' + ide + '?fields=feed.limit(' + limit + ')&access_token=' + toket)
             a = json.loads(p.text)
-            jalan('\x1b[1;91m[\xe2\x9c\xba] \x1b[1;92mPlease wait \x1b[1;97m...')
+            jalan('\x1b[1;91m[\xe2\x9c\xba] \x1b[1;92mProses Woy, Bot Butuh Waktu juga \x1b[1;97m...')
             print 52 * '\x1b[1;97m\xe2\x95\x90'
             for s in a['feed']['data']:
                 f = s['id']
@@ -1715,12 +1715,12 @@ def bot_komen():
                 print '\x1b[1;92m[\x1b[1;97m' + km[:10].replace('\n', ' ') + '... \x1b[1;92m]'
 
             print
-            print '\r\x1b[1;91m[+]\x1b[1;97m Finish \x1b[1;96m' + str(len(komen))
-            raw_input('\n\x1b[1;91m[ \x1b[1;97mBack \x1b[1;91m]')
+            print '\r\x1b[1;91m[+]\x1b[1;97m Selesai \x1b[1;96m' + str(len(komen))
+            raw_input('\n\x1b[1;91m[ \x1b[1;97mKembali \x1b[1;91m]')
             menu_bot()
         except KeyError:
-            print '\x1b[1;91m[!] ID not found'
-            raw_input('\n\x1b[1;91m[ \x1b[1;97mBack \x1b[1;91m]')
+            print '\x1b[1;91m[!] ID Salah'
+            raw_input('\n\x1b[1;91m[ \x1b[1;97mKembali \x1b[1;91m]')
             menu_bot()
 
 
@@ -1737,18 +1737,18 @@ def grup_komen():
         os.system('clear')
         print logo
         print 52 * '\x1b[1;97m\xe2\x95\x90'
-        print "\x1b[1;91m[!] \x1b[1;92mGunakan \x1b[1;97m'<>' \x1b[1;92mUntuk Baris Baru"
-        ide = raw_input('\x1b[1;91m[+] \x1b[1;92mID Group  \x1b[1;91m:\x1b[1;97m ')
-        km = raw_input('\x1b[1;91m[+] \x1b[1;92mComments \x1b[1;91m:\x1b[1;97m ')
-        limit = raw_input('\x1b[1;91m[!] \x1b[1;92mLimit \x1b[1;91m:\x1b[1;97m ')
+        print "\x1b[1;91m[!] \x1b[1;92mGunakan Perintah \x1b[1;97m'<>' \x1b[1;92mUntuk Baris Baru"
+        ide = raw_input('\x1b[1;91m[+] \x1b[1;92mID Grup  \x1b[1;91m:\x1b[1;97m ')
+        km = raw_input('\x1b[1;91m[+] \x1b[1;92mTulis Komentarmu \x1b[1;91m:\x1b[1;97m ')
+        limit = raw_input('\x1b[1;91m[!] \x1b[1;92mJumlah \x1b[1;91m:\x1b[1;97m ')
         km = km.replace('<>', '\n')
         try:
             ah = requests.get('https://graph.facebook.com/group/?id=' + ide + '&access_token=' + toket)
             asw = json.loads(ah.text)
-            print '\x1b[1;91m[\x1b[1;96m\xe2\x9c\x93\x1b[1;91m] \x1b[1;92mName grup \x1b[1;91m:\x1b[1;97m ' + asw['name']
+            print '\x1b[1;91m[\x1b[1;96m\xe2\x9c\x93\x1b[1;91m] \x1b[1;92mNama grup \x1b[1;91m:\x1b[1;97m ' + asw['name']
             p = requests.get('https://graph.facebook.com/v3.0/' + ide + '?fields=feed.limit(' + limit + ')&access_token=' + toket)
             a = json.loads(p.text)
-            jalan('\x1b[1;91m[\xe2\x9c\xba] \x1b[1;92mPlease wait \x1b[1;97m...')
+            jalan('\x1b[1;91m[\xe2\x9c\xba] \x1b[1;92mProses, Bot Perlu Waktu Cuyy \x1b[1;97m...')
             print 52 * '\x1b[1;97m\xe2\x95\x90'
             for s in a['feed']['data']:
                 f = s['id']
@@ -1757,12 +1757,12 @@ def grup_komen():
                 print '\x1b[1;92m[\x1b[1;97m' + km[:10].replace('\n', ' ') + '... \x1b[1;92m]'
 
             print
-            print '\r\x1b[1;91m[+]\x1b[1;97m Finish \x1b[1;96m' + str(len(komengrup))
-            raw_input('\n\x1b[1;91m[ \x1b[1;97mBack \x1b[1;91m]')
+            print '\r\x1b[1;91m[+]\x1b[1;97mSelesai \x1b[1;96m' + str(len(komengrup))
+            raw_input('\n\x1b[1;91m[ \x1b[1;97mKembali \x1b[1;91m]')
             menu_bot()
         except KeyError:
-            print '\x1b[1;91m[!] ID not found'
-            raw_input('\n\x1b[1;91m[ \x1b[1;97mBack \x1b[1;91m]')
+            print '\x1b[1;91m[!] ID Salah'
+            raw_input('\n\x1b[1;91m[ \x1b[1;97mKembali \x1b[1;91m]')
             menu_bot()
 
 
@@ -1782,8 +1782,8 @@ def deletepost():
     os.system('clear')
     print logo
     print 52 * '\x1b[1;97m\xe2\x95\x90'
-    print '\x1b[1;91m[+] \x1b[1;92mFrom \x1b[1;91m: \x1b[1;97m%s' % nama
-    jalan('\x1b[1;91m[+] \x1b[1;92mStarting remove status\x1b[1;97m ...')
+    print '\x1b[1;91m[+] \x1b[1;92mDari \x1b[1;91m: \x1b[1;97m%s' % nama
+    jalan('\x1b[1;91m[+] \x1b[1;92mMemulai Hapus Postingan\x1b[1;97m ...')
     print 52 * '\x1b[1;97m\xe2\x95\x90'
     asu = requests.get('https://graph.facebook.com/me/feed?access_token=' + toket)
     asus = json.loads(asu.text)
@@ -1800,11 +1800,11 @@ def deletepost():
             piro += 1
         except requests.exceptions.ConnectionError:
             print '\x1b[1;91m[!] Connection Error'
-            raw_input('\n\x1b[1;91m[ \x1b[1;97mBack \x1b[1;91m]')
+            raw_input('\n\x1b[1;91m[ \x1b[1;97mKembali \x1b[1;91m]')
             menu_bot()
 
-    print '\n\x1b[1;91m[+] \x1b[1;97mFinish'
-    raw_input('\n\x1b[1;91m[ \x1b[1;97mBack \x1b[1;91m]')
+    print '\n\x1b[1;91m[+] \x1b[1;97mSelesai'
+    raw_input('\n\x1b[1;91m[ \x1b[1;97mKembali \x1b[1;91m]')
     menu_bot()
 
 
@@ -1821,29 +1821,29 @@ def accept():
     os.system('clear')
     print logo
     print 52 * '\x1b[1;97m\xe2\x95\x90'
-    limit = raw_input('\x1b[1;91m[!] \x1b[1;92mLimit \x1b[1;91m:\x1b[1;97m ')
+    limit = raw_input('\x1b[1;91m[!] \x1b[1;92mJumlah \x1b[1;91m:\x1b[1;97m ')
     r = requests.get('https://graph.facebook.com/me/friendrequests?limit=' + limit + '&access_token=' + toket)
     friends = json.loads(r.text)
     if '[]' in str(friends['data']):
-        print '\x1b[1;91m[!] No friends request'
-        raw_input('\n\x1b[1;91m[ \x1b[1;97mBack \x1b[1;91m]')
+        print '\x1b[1;91m[!] Gada yg mau berteman sama lu Awikwok'
+        raw_input('\n\x1b[1;91m[ \x1b[1;97mKembali \x1b[1;91m]')
         menu_bot()
-    jalan('\x1b[1;91m[\xe2\x9c\xba] \x1b[1;92mPlease wait \x1b[1;97m...')
+    jalan('\x1b[1;91m[\xe2\x9c\xba] \x1b[1;92mTunggu Woyy\x1b[1;97m...')
     print 52 * '\x1b[1;97m\xe2\x95\x90'
     for i in friends['data']:
         gas = requests.post('https://graph.facebook.com/me/friends/' + i['from']['id'] + '?access_token=' + toket)
         a = json.loads(gas.text)
         if 'error' in str(a):
-            print '\x1b[1;91m[+] \x1b[1;92mName  \x1b[1;91m:\x1b[1;97m ' + i['from']['name']
+            print '\x1b[1;91m[+] \x1b[1;92mNama  \x1b[1;91m:\x1b[1;97m ' + i['from']['name']
             print '\x1b[1;91m[+] \x1b[1;92mID    \x1b[1;91m:\x1b[1;97m ' + i['from']['id'] + '\x1b[1;91m Failed'
             print 52 * '\x1b[1;97m\xe2\x95\x90'
         else:
-            print '\x1b[1;91m[+] \x1b[1;92mName  \x1b[1;91m:\x1b[1;97m ' + i['from']['name']
+            print '\x1b[1;91m[+] \x1b[1;92mNama  \x1b[1;91m:\x1b[1;97m ' + i['from']['name']
             print '\x1b[1;91m[+] \x1b[1;92mID    \x1b[1;91m:\x1b[1;97m ' + i['from']['id'] + '\x1b[1;92m Berhasil'
             print 52 * '\x1b[1;97m\xe2\x95\x90'
 
-    print '\n\x1b[1;91m[+] \x1b[1;97mFinish'
-    raw_input('\n\x1b[1;91m[ \x1b[1;97mBack \x1b[1;91m]')
+    print '\n\x1b[1;91m[+] \x1b[1;97mSelesai'
+    raw_input('\n\x1b[1;91m[ \x1b[1;97mKembali \x1b[1;91m]')
     menu_bot()
 
 
@@ -1860,7 +1860,7 @@ def unfriend():
         os.system('clear')
         print logo
         print 52 * '\x1b[1;97m\xe2\x95\x90'
-        jalan('\x1b[1;91m[\xe2\x9c\xba] \x1b[1;92mPlease wait \x1b[1;97m...')
+        jalan('\x1b[1;91m[\xe2\x9c\xba] \x1b[1;92mTunggu Cok \x1b[1;97m...')
         print 52 * '\x1b[1;97m\xe2\x95\x90'
         print '\x1b[1;97mStop \x1b[1;91mCTRL+C'
         print
@@ -1876,12 +1876,12 @@ def unfriend():
         except IndexError:
             pass
         except KeyboardInterrupt:
-            print '\x1b[1;91m[!] Stopped'
-            raw_input('\n\x1b[1;91m[ \x1b[1;97mBack \x1b[1;91m]')
+            print '\x1b[1;91m[!] Terhenti'
+            raw_input('\n\x1b[1;91m[ \x1b[1;97mKembali \x1b[1;91m]')
             menu_bot()
 
-    print '\n\x1b[1;91m[+] \x1b[1;97mFinish'
-    raw_input('\n\x1b[1;91m[ \x1b[1;97mBack \x1b[1;91m]')
+    print '\n\x1b[1;91m[+] \x1b[1;97mSelesai'
+    raw_input('\n\x1b[1;91m[ \x1b[1;97mKembali \x1b[1;91m]')
     menu_bot()
 
 
@@ -1898,12 +1898,12 @@ def lain():
     os.system('clear')
     print logo
     print 52 * '\x1b[1;97m\xe2\x95\x90'
-    print '║-> \x1b[1;37;40m1. Write Status'
-    print '║-> \x1b[1;37;40m2. Make Wordlist'
-    print '║-> \x1b[1;37;40m3. Account Checker'
-    print '║-> \x1b[1;37;40m4. List Group'
-    print '║-> \x1b[1;37;40m5. Profile Guard'
-    print '║-> \x1b[1;31;40m0. Back'
+    print '║-> \x1b[1;37;40m1. Update Status'
+    print '║-> \x1b[1;37;40m2. Mrmbuat Catatan'
+    print '║-> \x1b[1;37;40m3. Mengecek Akun'
+    print '║-> \x1b[1;37;40m4. Daftar Grup Anda'
+    print '║-> \x1b[1;37;40m5. Pelindung Foto Profil'
+    print '║-> \x1b[1;31;40m0. Kembali'
     print '\x1b[1;37;40m║'
     pilih_lain()
 
@@ -1911,7 +1911,7 @@ def lain():
 def pilih_lain():
     other = raw_input('╚═\x1b[1;91m▶\x1b[1;97m ')
     if other == '':
-        print '\x1b[1;91m[!] Can\'t empty'
+        print '\x1b[1;91m[!] Pilih Angkanya'
         pilih_lain()
     else:
         if other == '1':
@@ -1949,18 +1949,18 @@ def status():
     os.system('clear')
     print logo
     print 52 * '\x1b[1;97m\xe2\x95\x90'
-    msg = raw_input('\x1b[1;91m[+] \x1b[1;92mWrite status \x1b[1;91m:\x1b[1;97m ')
+    msg = raw_input('\x1b[1;91m[+] \x1b[1;92mTulis Statusmu \x1b[1;91m:\x1b[1;97m ')
     if msg == '':
-        print '\x1b[1;91m[!] Can\'t empty'
-        raw_input('\n\x1b[1;91m[ \x1b[1;97mBack \x1b[1;91m]')
+        print '\x1b[1;91m[!] Ga Boleh Kosong'
+        raw_input('\n\x1b[1;91m[ \x1b[1;97mKembali \x1b[1;91m]')
         lain()
     else:
         res = requests.get('https://graph.facebook.com/me/feed?method=POST&message=' + msg + '&access_token=' + toket)
         op = json.loads(res.text)
-        jalan('\x1b[1;91m[\xe2\x9c\xba] \x1b[1;92mPlease wait \x1b[1;97m...')
+        jalan('\x1b[1;91m[\xe2\x9c\xba] \x1b[1;92mTunggu Cuk \x1b[1;97m...')
         print 52 * '\x1b[1;97m\xe2\x95\x90'
         print '\x1b[1;91m[+] \x1b[1;92mStatus ID\x1b[1;91m : \x1b[1;97m' + op['id']
-        raw_input('\n\x1b[1;91m[ \x1b[1;97mBack \x1b[1;91m]')
+        raw_input('\n\x1b[1;91m[ \x1b[1;97mKembali \x1b[1;91m]')
         lain()
 
 
@@ -1978,23 +1978,23 @@ def wordlist():
             os.system('clear')
             print logo
             print 52 * '\x1b[1;97m\xe2\x95\x90'
-            print '\x1b[1;91m[?] \x1b[1;92mIsi data lengkap target dibawah'
+            print '\x1b[1;91m[?] \x1b[1;92mIsi Data Lengkap Target Dibawah'
             print 52 * '\x1b[1;97m\xe2\x95\x90'
-            a = raw_input('\x1b[1;91m[+] \x1b[1;92mName Depan \x1b[1;97m: ')
+            a = raw_input('\x1b[1;91m[+] \x1b[1;92mNama Depan \x1b[1;97m: ')
             file = open(a + '.txt', 'w')
-            b = raw_input('\x1b[1;91m[+] \x1b[1;92mName Tengah \x1b[1;97m: ')
-            c = raw_input('\x1b[1;91m[+] \x1b[1;92mName Belakang \x1b[1;97m: ')
-            d = raw_input('\x1b[1;91m[+] \x1b[1;92mName Panggilan \x1b[1;97m: ')
+            b = raw_input('\x1b[1;91m[+] \x1b[1;92mNama Tengah \x1b[1;97m: ')
+            c = raw_input('\x1b[1;91m[+] \x1b[1;92mNama Belakang \x1b[1;97m: ')
+            d = raw_input('\x1b[1;91m[+] \x1b[1;92mNama Panggilan \x1b[1;97m: ')
             e = raw_input('\x1b[1;91m[+] \x1b[1;92mTanggal Lahir >\x1b[1;96mex: |DDMMYY| \x1b[1;97m: ')
             f = e[0:2]
             g = e[2:4]
             h = e[4:]
             print 52 * '\x1b[1;97m\xe2\x95\x90'
             print '\x1b[1;91m[?] \x1b[1;93mKalo Jomblo SKIP aja :v'
-            i = raw_input('\x1b[1;91m[+] \x1b[1;92mName Pacar \x1b[1;97m: ')
-            j = raw_input('\x1b[1;91m[+] \x1b[1;92mName Panggilan Pacar \x1b[1;97m: ')
+            i = raw_input('\x1b[1;91m[+] \x1b[1;92mNama Pacar \x1b[1;97m: ')
+            j = raw_input('\x1b[1;91m[+] \x1b[1;92mNama Panggilan Pacar \x1b[1;97m: ')
             k = raw_input('\x1b[1;91m[+] \x1b[1;92mTanggal Lahir Pacar >\x1b[1;96mex: |DDMMYY| \x1b[1;97m: ')
-            jalan('\x1b[1;91m[\xe2\x9c\xba] \x1b[1;92mPlease wait \x1b[1;97m...')
+            jalan('\x1b[1;91m[\xe2\x9c\xba] \x1b[1;92mAnjay Mabar \x1b[1;97m...')
             l = k[0:2]
             m = k[2:4]
             n = k[4:]

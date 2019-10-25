@@ -62,8 +62,8 @@ reaksigrup = []
 komen = []
 komengrup = []
 listgrup = []
-vulnot = '\x1b[31mNot Vuln'
-vuln = '\x1b[32mVuln'
+vulnot = '\x1b[31mEmail telah Terdaftar'
+vuln = '\x1b[32mEmail Mati'
 
 
 def login():
